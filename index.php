@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/boostrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="all.css">
 </head>
 <body>
-
-tes
-    <script scr="js.bosstrap.JS"></script>
-    <script scr="all.JS"></script>
+<?php
+include("navbar.php");
+?>
+    <script scr="js/bootstrap.js"></script>
+    <script scr="all.js"></script>
 </body>
 </html>
