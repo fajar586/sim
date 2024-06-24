@@ -32,9 +32,9 @@ include("../navbar.php");
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>IK</td>
-                                <td>Informatika Komputer</td>
-                                <td>Ismanuddin, S.Kom, M.Kom.</td>
+                                <td>....</td>
+                                <td>....</td>
+                                <td>....</td>
                                 <td>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
