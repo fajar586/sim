@@ -14,7 +14,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Dosen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Jurusan</a>
+                    <a class="nav-link active" aria-current="page" href="/sim/jurusan/index.php">Jurusan</a>
                 </li>
                 
             </ul>
