@@ -13,25 +13,30 @@ include("../navbar.php");
 ?>
 <div class="container mt-4">
   <div class="row">
-    <div class="col-7 m-auto ">
+    <div class="col-10 m-auto ">
     <div class="card">
                     <div class="card-header">
-                        Data Jurusan
+                        Data Dosen
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Kode Jurusan</th>
+                            <th scope="col">NIDN</th>
                             <th scope="col">Nama Jurusan</th>
-                            <th scope="col">Kaprodi</th>
+                            <th scope="col">tempat tanggal lahir</th>
+                            <th scope="col">tanggal lahir</th>
+                            <th scope="col">jenjang</th>
                             <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
                                 <td>..</td>
                                 <td>..</td>
                                 <td>..</td>
