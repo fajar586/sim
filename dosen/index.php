@@ -39,7 +39,6 @@ include("../navbar.php");
                                 <td>..</td>
                                 <td>..</td>
                                 <td>..</td>
-                                <td>..</td>
                                 <td>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>

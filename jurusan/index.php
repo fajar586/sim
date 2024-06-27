@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../all.css">
+    <link rel="stylesheet" href="../css/all.css">
 </head>
 <body>
 <?php
@@ -36,8 +36,8 @@ include("../navbar.php");
                                 <td>..</td>
                                 <td>..</td>
                                 <td>
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -48,6 +48,6 @@ include("../navbar.php");
   </div>
 </div>
     <script scr="../js/bootstrap.js"></script>
-    <script scr="../all.js"></script>
+    <script scr="../js/all.js"></script>
 </body>
 </html>

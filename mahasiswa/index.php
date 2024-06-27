@@ -13,10 +13,10 @@ include("../navbar.php");
 ?>
 <div class="container mt-4">
   <div class="row">
-    <div class="col-10 m-auto ">
+    <div class="col-12 m-auto ">
     <div class="card">
                     <div class="card-header">
-                        Data Dosen
+                        Data mahasiswa
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
@@ -33,13 +33,11 @@ include("../navbar.php");
                             <th scope="col">tanggal lahir</th>
                             <th scope="col">jenjang</th>
                             <th scope="col">Aksi</th>
-                            <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>..</td>
                                 <td>..</td>
                                 <td>..</td>
                                 <td>..</td>
