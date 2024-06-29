@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/all.css">
 </head>
 <body>
-<div?php
+
+<?php
 include("../navbar.php");
 ?>
 <div class="container mt-4">
@@ -17,7 +18,7 @@ include("../navbar.php");
     <div class="card">
         <h2> form tambah nama mahasiswa</h2>
                     <div class="card-header">
-                    <form method="POST" action="add.php">
+                    <form method="POST" action="add.php" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nim</label>
                                 <input type="text" class="form-control" name="kode" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -25,17 +26,12 @@ include("../navbar.php");
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">nama jurusan</label>
-                                <input type="text" class="form-control" name="nama jur" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                            </div>
-
-                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">nama mahasiswa</label>
-                                <input type="text" class="form-control" name="nama jur" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" name="nama " id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
+                          
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">tempat tanggal lahir</label>
                                 <input type="text" class="form-control" name="ttl" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -48,16 +44,46 @@ include("../navbar.php");
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
+
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">agama</label>
-                                <input type="text" class="form-control" name="agama" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <select nama="" id="" class="form-control">
+                                    <option value="">-pilih agama-</option>
+                                    <option value="islam">islam</option>
+                                    <option value="kristen">kristen</option>
+                                    <option value="katholik">katholik</option>
+                                    <option value="budha">budha</option>
+                                    <option value="konghucu">konghucu</option>
+                                </select>
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">id jurusan</label>
-                                <input type="text" class="form-control" name="kode jurusan" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                                <label for="exampleInputEmail1" class="form-label"> jurusan</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">-pilih jurusan-</option>
+                                    <?php
+                                
+                                include("../koneksi.php");
+
+                                
+                                $sql = "SELECT * FROM jurusan";
+
+                        
+                                $tampil_data = mysqli_query($koneksi,$sql);
+
+                                
+                                $nomor = 1;
+                                foreach($tampil_data as $jur){
+                            ?>
+                            <option value="<?php echo $jur['id_jurusan'] ?>"><?php echo $jur['nama'] ?></option>
+                            <?php
+                                }
+                            ?>
+                                </select>
+                            
+                                
+                               
+              
                             </div>
                            
                             <div class="mb-3">
@@ -67,8 +93,23 @@ include("../navbar.php");
                             </div>
 
                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">jenis kelamin</label>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jk" id="exampleRadios1" value="laki-laki" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    laki-laki
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jk" id="exampleRadios2" value="perempuan">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    perempuan
+                                </label>
+                                </div>
+
+                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">foto</label>
-                                <input type="image" class="form-control" name="foto" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="file" class="form-control" name="foto" accept="image/*" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 

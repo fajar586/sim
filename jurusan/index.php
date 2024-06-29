@@ -48,15 +48,16 @@ include("../navbar.php");
                             <tr>
                                 <th scope="row"><?php echo $nomor++ ?></th>
                                 <td><?php echo $jur['kode'] ?></td>
-                                <td><?php echo $jur['nama_jurusan'] ?></td>
+                                <td><?php echo $jur['nama'] ?></td>
                                 <td><?php echo $jur['id_dosen'] ?></td>
-                                <td></td>
+                                <td>
+                                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a></td>
                             <?php
                                 }
                             ?>
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                </td>
+                                    
+                                
                             </tr>
                         </tbody>
                     </table>

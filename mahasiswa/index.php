@@ -16,7 +16,7 @@ include("../navbar.php");
     <div class="col-12 m-auto ">
     <div class="card">
                     <div class="card-header">
-                        Data mahasiswa
+                    <a href="form.php">tambah</a>
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
@@ -60,13 +60,15 @@ include("../navbar.php");
                                 <td><?php echo $ms['agama'] ?></td>
                                 <td><?php echo $ms['foto'] ?></td>
                                 <td><?php echo $ms['email'] ?></td>
-                                <td></td>
+                                <td>
+                                <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
+                                </td>
                             <?php
                                 }
                             ?>
-                                    <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
-                                </td>
+                                    
+                                
                             </tr>
                         </tbody>
                     </table>

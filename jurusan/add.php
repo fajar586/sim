@@ -10,7 +10,7 @@ $kpd = $_POST['kaprodi'];
 include("../koneksi.php");
 
 
-$sql = "INSERT INTO jurusan (kode, nama_jurusan, id_dosen) VALUES ('$kode', '$jurusan', '$kpd')";
+$sql = "INSERT INTO jurusan (kode, nama, id_dosen) VALUES ('$kode', '$jurusan', '$kpd')";
 
 
 $tambah_data = mysqli_query($koneksi,$sql)
