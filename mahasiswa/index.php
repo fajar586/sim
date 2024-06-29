@@ -25,29 +25,45 @@ include("../navbar.php");
                             <th scope="col">#</th>
                             <th scope="col">NIDN</th>
                             <th scope="col">Nama Jurusan</th>
-                            <th scope="col">tempat tanggal lahir</th>
+                            <th scope="col">tempat tanggal lahi</th>
                             <th scope="col">tanggal lahir</th>
-                            <th scope="col">jenjang</th>
-                            <th scope="col">Aksi</th>
-                            <th scope="col">tempat tanggal lahir</th>
-                            <th scope="col">tanggal lahir</th>
-                            <th scope="col">jenjang</th>
+                            <th scope="col">agama</th>
+                            <th scope="col">id jurusan</th>
+                            <th scope="col">foto</th>
+                            <th scope="col">email</th>
                             <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                                
+                                include("../koneksi.php");
+
+                                
+                                $sql = "SELECT * FROM mahasiswa";
+
+                        
+                                $tampil_data = mysqli_query($koneksi,$sql);
+
+                                
+                                $nomor = 1;
+                                foreach($tampil_data as $ms){
+                            ?>
+
                             <tr>
-                                <th scope="row">1</th>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>
+                                <th scope="row"><?php echo $nomor++ ?></th>
+                                <td><?php echo $ms['nim'] ?></td>
+                                <td><?php echo $ms['nama'] ?></td>
+                                <td><?php echo $ms['tempat_tanggal_lahir'] ?></td>
+                                <td><?php echo $ms['tanggal_lahir'] ?></td>
+                                <td><?php echo $ms['id_jurusan'] ?></td>
+                                <td><?php echo $ms['agama'] ?></td>
+                                <td><?php echo $ms['foto'] ?></td>
+                                <td><?php echo $ms['email'] ?></td>
+                                <td></td>
+                            <?php
+                                }
+                            ?>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
                                 </td>

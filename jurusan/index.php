@@ -16,7 +16,7 @@ include("../navbar.php");
     <div class="col-7 m-auto ">
     <div class="card">
                     <div class="card-header">
-                        Data Jurusan
+                        <a href="form.php">tambah</a>
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
@@ -30,12 +30,30 @@ include("../navbar.php");
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                                
+                                include("../koneksi.php");
+
+                                
+                                $sql = "SELECT * FROM jurusan";
+
+                        
+                                $tampil_data = mysqli_query($koneksi,$sql);
+
+                                
+                                $nomor = 1;
+                                foreach($tampil_data as $jur){
+                            ?>
+
                             <tr>
-                                <th scope="row">1</th>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>
+                                <th scope="row"><?php echo $nomor++ ?></th>
+                                <td><?php echo $jur['kode'] ?></td>
+                                <td><?php echo $jur['nama_jurusan'] ?></td>
+                                <td><?php echo $jur['id_dosen'] ?></td>
+                                <td></td>
+                            <?php
+                                }
+                            ?>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i></a>
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                 </td>
