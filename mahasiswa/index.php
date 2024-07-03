@@ -13,24 +13,19 @@ include("../navbar.php");
 ?>
 <div class="container mt-4">
   <div class="row">
-    <div class="col-12 m-auto ">
+    <div class="col-6 m-auto ">
     <div class="card">
                     <div class="card-header">
-                    <a href="form.php">tambah</a>
+                    <a href="form.php" class="btn btn-primary">Tambah Data</a>
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">NIDN</th>
-                            <th scope="col">Nama Jurusan</th>
-                            <th scope="col">tempat tanggal lahi</th>
-                            <th scope="col">tanggal lahir</th>
-                            <th scope="col">agama</th>
-                            <th scope="col">id jurusan</th>
-                            <th scope="col">foto</th>
-                            <th scope="col">email</th>
+                            <th scope="col">Nim</th>
+                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">jurusan</th>
                             <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -54,13 +49,37 @@ include("../navbar.php");
                                 <th scope="row"><?php echo $nomor++ ?></th>
                                 <td><?php echo $ms['nim'] ?></td>
                                 <td><?php echo $ms['nama'] ?></td>
-                                <td><?php echo $ms['tempat_tanggal_lahir'] ?></td>
-                                <td><?php echo $ms['tanggal_lahir'] ?></td>
                                 <td><?php echo $ms['id_jurusan'] ?></td>
-                                <td><?php echo $ms['agama'] ?></td>
-                                <td><?php echo $ms['foto'] ?></td>
-                                <td><?php echo $ms['email'] ?></td>
                                 <td>
+                                    <!-- tombol detail -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa-solid fa-pencil"></i>
+                                    </button>
+                                    <!-- modal detail -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <table class="table">
+                                          
+                                            <tbody>
+                                                <tr>
+                                                <th scope="row">NIM</th>
+                                                <td><?php echo $ms['nim'] ?></td>
+                                                
+                                                </tr>
+                                               
+                                            </tbody>
+                                            </table>
+    
+                                            </div>
+                                            
+                                            </div>
+                                        </div>
                                 <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                 <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
                                 </td>
