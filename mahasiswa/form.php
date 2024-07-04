@@ -47,7 +47,7 @@ include("../navbar.php");
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">agama</label>
-                                <select nama="" id="" class="form-control">
+                                <select nama="agama" id="" class="form-control">
                                     <option value="">-pilih agama-</option>
                                     <option value="islam">islam</option>
                                     <option value="kristen">kristen</option>
