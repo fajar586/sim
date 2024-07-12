@@ -35,7 +35,7 @@ include("../navbar.php");
                                 include("../koneksi.php");
 
                                 
-                                $sql = "SELECT * FROM mahasiswa";
+                                $sql = "SELECT * FROM mahasiswa INNER JOIN jurusan ON mahasiswa.id_jurusan=jurusan.id_jurusan";
 
                         
                                 $tampil_data = mysqli_query($koneksi,$sql);
@@ -52,11 +52,11 @@ include("../navbar.php");
                                 <td><?php echo $ms['id_jurusan'] ?></td>
                                 <td>
                                     <!-- tombol detail -->
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=""#detail<?php echo $jur['id_mahasiswa'] ?>"></button>">
                                     <i class="fa-solid fa-pencil"></i>
                                     </button>
                                     <!-- modal detail -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="detail<?php echo $jur['id_mahasiswa'] ?>"></div>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                             <div class="modal-header">

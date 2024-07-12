@@ -32,16 +32,36 @@ include("../navbar.php");
                             </tr>
                         </thead>
                         <tbody>
+                        <?php
+                                
+                                include("../koneksi.php");
+
+                                
+                                $sql = "SELECT * FROM dosen";
+
+                        
+                                $tampil_data = mysqli_query($koneksi,$sql);
+
+                                
+                                $nomor = 1;
+                                foreach($tampil_data as $dos){
+                            ?>
+
                             <tr>
-                                <th scope="row">1</th>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
-                                <td>..</td>
+                            <tr>
+                                <th scope="row"><?php echo $nomor++ ?></th>
+                                <td><?php echo $dos['nidn'] ?></td>
+                                <td><?php echo $dos['nama'] ?></td>
+                                <td><?php echo $dos['tempat_tanggal_lahir'] ?></td>
+                                <td><?php echo $dos['tanggal_lahir'] ?></td>
+                                <td><?php echo $dos['jenjang'] ?></td>
                                 <td>
                                     <a href="" class="btn btn-info btn-sm"><i class="fa-solid fa-pencil"></i></a>
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a>
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-eraser"></i></a></td>
+                            <?php
+                                }
+                            ?>
+                                    
                                 </td>
                             </tr>
                         </tbody>

@@ -19,20 +19,32 @@ include("../navbar.php");
                     <div class="card-header">
                     <form method="POST" action="add.php">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Kode Jurusan</label>
-                                <input type="text" class="form-control" name="kode" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="exampleInputEmail1" class="form-label">NIDN</label>
+                                <input type="text" class="form-control" name="NIDN" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Nama Jurusan</label>
+                                <label for="exampleInputEmail1" class="form-label">nama</label>
                                 <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Kepala Program Studi</label>
-                                <input type="text" class="form-control" name="kaprodi" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="exampleInputEmail1" class="form-label">tempat tanggal lahir</label>
+                                <input type="text" class="form-control" name="tempat" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">tanggal lahir</label>
+                                <input type="date" class="form-control" name="tanggal" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">jenjang pendidikan</label>
+                                <input type="text" class="form-control" name="jenjang" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
