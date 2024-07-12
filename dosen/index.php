@@ -16,7 +16,7 @@ include("../navbar.php");
     <div class="col-10 m-auto ">
     <div class="card">
                     <div class="card-header">
-                        Data Dosen
+                    <a href="form.php" class="btn btn-primary">Tambah Data</a>
                     </div>
                     <div class="card-body">
                     <table class="table table-striped">

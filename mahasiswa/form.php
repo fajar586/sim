@@ -21,13 +21,13 @@ include("../navbar.php");
                     <form method="POST" action="add.php" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Nim</label>
-                                <input type="text" class="form-control" name="kode" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" name="nim" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">nama mahasiswa</label>
-                                <input type="text" class="form-control" name="nama " id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                             </div>
 
@@ -59,7 +59,7 @@ include("../navbar.php");
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label"> jurusan</label>
-                                <select name="" id="" class="form-control">
+                                <select name="jurusan" id="" class="form-control">
                                     <option value="">-pilih jurusan-</option>
                                     <?php
                                 
@@ -72,7 +72,7 @@ include("../navbar.php");
                                 $tampil_data = mysqli_query($koneksi,$sql);
 
                                 
-                                $nomor = 1;
+                                
                                 foreach($tampil_data as $jur){
                             ?>
                             <option value="<?php echo $jur['id_jurusan'] ?>"><?php echo $jur['nama'] ?></option>
